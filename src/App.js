@@ -1,16 +1,26 @@
 import Nav from "./Views/Nav";
-import {useState} from "react";
+// import {useState} from "react";
+import Main from "./Views/Main";
 
 const App = () => {
-    const [data, setData] = useState(1)
-    const handleClick = () =>{
-        console.log("check state: ", data)
-        setData(data + 1)
-    }
+    // const [name, setName] = useState("")
+
+
+    // const outputName = (event) => {
+    //     if (event.key === "Enter") {
+    //         console.log("name: ", name)
+    //         setName("")
+    //     }
+    // }
     return (
         <div className="App">
             <Nav/>
-            <button onClick={()=>{handleClick()}}>click</button>
+            {/*<input type="text"*/}
+            {/*       value={name}*/}
+            {/*       onChange={(event) => setName(event.target.value)}*/}
+            {/*       onKeyPress={outputName}*/}
+            {/*/>*/}
+            <Main/>
         </div>
     );
 }
