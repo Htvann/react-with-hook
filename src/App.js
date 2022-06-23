@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import Nav from "./Views/Nav";
+import {useState} from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+    const [data, setData] = useState(1)
+    const handleClick = () =>{
+        console.log("check state: ", data)
+        setData(data + 1)
+    }
+    return (
+        <div className="App">
+            <Nav/>
+            <button onClick={()=>{handleClick()}}>click</button>
+        </div>
+    );
 }
 
 export default App;
