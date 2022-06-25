@@ -1,6 +1,7 @@
-import Nav from "./Views/Nav";
+import Nav from "./Views/Components/Nav";
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import TodoList from "./Views/Pages/TodoList";
 // import {useState} from "react";
-import Main from "./Views/Main";
 
 const App = () => {
     // const [name, setName] = useState("")
@@ -13,15 +14,13 @@ const App = () => {
     //     }
     // }
     return (
-        <div className="App">
+
+        <Router>
             <Nav/>
-            {/*<input type="text"*/}
-            {/*       value={name}*/}
-            {/*       onChange={(event) => setName(event.target.value)}*/}
-            {/*       onKeyPress={outputName}*/}
-            {/*/>*/}
-            <Main/>
-        </div>
+            <Routes>
+                <Route path="/todo" element={<TodoList/>}/>
+            </Routes>
+        </Router>
     );
 }
 

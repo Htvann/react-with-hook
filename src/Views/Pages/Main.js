@@ -6,11 +6,11 @@ const Main = () => {
     const [todo, setTodo] = useState([
         {id: 1, title: "doing homeword",}
     ])
-    const [item, setItem] = useState({})
+    // const [item, setItem] = useState({})
     const [inp, setInp] = useState("")
     const addTodo=(event)=>{
         if (event.key === "Enter") {
-            console.log("inp: ", inp)
+            // console.log("inp: ", inp)
             // setItem({
             //     id: Math.floor(Math.random() * 100),
             //     title: inp
@@ -25,9 +25,9 @@ const Main = () => {
             setInp("")
         }
     }
-    useEffect(()=>{
-
-    },[setTodo])
+    // useEffect(()=>{
+    //
+    // },[setTodo])
     return (
         <div className="todoList">
             <input type="text" value={inp} onKeyPress={addTodo} onChange={(event)=>setInp(event.target.value)} />
