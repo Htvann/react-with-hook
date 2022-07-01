@@ -1,6 +1,7 @@
 import Nav from "./Views/Components/Nav";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
-import TodoList from "./Views/Pages/TodoList";
+import Home from "./Views/Pages/Home/Home";
+import TodoList from "./Views/Pages/Todo/TodoList";
 // import {useState} from "react";
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
         <Router>
             <Nav/>
             <Routes>
+                <Route path="/" element={<Home/>}/>
                 <Route path="/todo" element={<TodoList/>}/>
             </Routes>
         </Router>
