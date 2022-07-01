@@ -8,7 +8,7 @@ const TodoList = () => {
     //     {id: 1, title: "doing homeword",}
     // ])
     // const [item, setItem] = useState({})
-    const [inp, setInp] = useState("")
+    // const [inp, setInp] = useState("")
 
     //add todo
     // const addTodo = (event) => {
@@ -49,6 +49,7 @@ const TodoList = () => {
     const deleteUser = (item) =>{
         dispatch({
             type: 'DELETE_USER',
+            payload: item.id
         })
     }
     return (
