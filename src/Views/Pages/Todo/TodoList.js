@@ -62,7 +62,7 @@ const TodoList = () => {
                             <div key={item.id} className="out">
                                 <div>
                                     {index + 1} - {item.name}
-                                    <button onClick={()=>deleteUser(index)}>x</button>
+                                    <button  onClick={()=>deleteUser(index)}>x</button>
                                 </div>
                             </div>
                         )
