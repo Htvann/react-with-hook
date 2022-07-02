@@ -1,6 +1,5 @@
 const initState = {
     users: [
-        {id: 1, name: 'Van'},
         {id: 2, name: 'Jame'},
         {id: 3, name: 'David'}
     ]
@@ -8,9 +7,9 @@ const initState = {
 const rootReducers = (state = initState, action) =>{
     switch (action.type){
         case 'DELETE_USER':
-            console.log("delete: ", initState.users.id)
             return{
-                ...state
+                ...state,
+                users: state.users.filter((item, index) => index !== action.payload)
             }
         case 'ADD_USER':
             let id = Math.floor(Math.random() * 100000)

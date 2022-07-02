@@ -46,10 +46,10 @@ const TodoList = () => {
             type: 'ADD_USER'
         })
     }
-    const deleteUser = (item) =>{
+    const deleteUser = (index) =>{
         dispatch({
             type: 'DELETE_USER',
-            payload: item.id
+            payload: index
         })
     }
     return (
@@ -62,7 +62,7 @@ const TodoList = () => {
                             <div key={item.id} className="out">
                                 <div>
                                     {index + 1} - {item.name}
-                                    <button onClick={()=>deleteUser(item)}>x</button>
+                                    <button onClick={()=>deleteUser(index)}>x</button>
                                 </div>
                             </div>
                         )
